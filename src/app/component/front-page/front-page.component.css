@@ -1,0 +1,57 @@
+.body-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    height:calc(100vh - 56px);
+}
+.mid-container{
+    flex-grow:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.time-con{
+    text-align:center;
+    font-size:2em;
+}
+.bottom-container{
+    position:relative;
+    width:100%;
+}
+.iFailed-button{
+    color:#333;
+    position:absolute;
+    right:25px;
+    top:-75px;		
+    background-color:#5a9216;
+    z-index:999;
+}
+.iFailedNow-button{
+    color:#333;
+    cursor:pointer;
+    background-color:#8bc34a;
+}
+.iFailed-button:hover{
+    background-color:#5a9216;
+    border:0;
+}
+.iFailedNow-button:hover{
+    background-color:#8bc34a;
+    border:0;
+}
+.tab-col{
+    text-align:center;
+    flex-grow:1;
+    padding:10px 0;
+}
+.bottom-tab{
+    background-color:#bef67a;
+}
+.boot-col{
+    text-align:center;
+    padding:10px 0;
+}
+.row-tab{	
+    background-color:#bef67a;
+}

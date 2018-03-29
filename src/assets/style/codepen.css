@@ -1,0 +1,192 @@
+@import "compass/css3"; 
+
+$pie_width: 200px;
+$pie_height: $pie_width /2;
+$wrapper-bg:  #E8E8E8; //#e0e0e0
+$red:#F44336;
+$yellow:#FF9800;
+$orange:#FF5722;
+$green:#8BC34A;
+$blue:#03A9F4;
+
+$red-hover:#E53935;
+$yellow-hover:#FB8C00;
+$orange-hover:#F4511E;
+$green-hover:#7CB342;
+$blue-hover:#039BE5;
+$text-color: #394955;
+$body-bg: #fff;
+$legend-bg: #f0f0f0;
+.container{
+  display: inline-block;
+  margin: 30px 20px;
+}
+.pie-wrapper{
+	position: relative;
+  width:$pie_width;
+  height:$pie_height;
+  overflow:hidden;
+  
+  .arc, &:before{
+  content: '';
+  width: $pie_width;
+  height: $pie_height;
+  position: absolute;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  left: 0;
+  box-sizing: border-box;
+  }
+  
+  &:before{
+  border: 15px solid $wrapper-bg;
+  border-bottom: none;
+  top: 0;
+  z-index: 1;
+  border-radius: 300px 300px 0 0;
+  }
+  
+  .arc{
+  border: 15px solid $green;
+  border-top: none;
+  border-radius: 0 0 300px 300px;
+  top: 100%;
+  z-index: 2;
+  
+   &::before{
+      content: "";
+      height:15px;
+      width:15px;
+      border-radius:50px;
+      position: absolute;
+      top: -10px;
+      left:-15px;
+    }  
+  }
+  
+  .score{
+    color: $text-color;
+    font-size: 28px;
+    display: block;
+    width: $pie-width;
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .arc[data-value="#{$i}"]{
+    @include animation(fill 2s);
+    @include transform(rotate(#{$i * 1.8}deg));
+    transition:All 5s ease;
+  
+    &:after{
+      content: '';
+      position: absolute;
+      left:  -40px;
+      top: 5px;
+    }
+  
+    &::before{
+      @include animation(fillColor 2s);
+    }
+  }
+}
+@for $i from 1 through 20 {
+  .arc[data-value="#{$i}"]{
+    border-color: $red;
+    
+    &::before{
+      background-color: $red;
+    }
+  }  
+  .appThemeColor{
+	background-color:$red;	
+  }  
+  .appThemeColorHover:hover{
+	background-color:$red-hover;	
+  }
+}
+@for $i from 21 through 40 {
+  .arc[data-value="#{$i}"]{
+    border-color: $yellow;
+    
+    &::before{
+      background-color: $yellow;
+    }
+  }  
+  .appThemeColor{
+	background-color:$yellow;	
+  }  
+  .appThemeColorHover:hover{
+	background-color:$yellow-hover;	
+  }
+}
+@for $i from 41 through 60 {
+  .arc[data-value="#{$i}"]{
+    border-color: $orange;
+    
+    &::before{
+      background-color: $orange;
+    }
+  }  
+  .appThemeColor{
+	background-color:$orange;	
+  }  
+  .appThemeColorHover:hover{
+	background-color:$orange-hover;	
+  }
+}
+@for $i from 61 through 80 {
+  .arc[data-value="#{$i}"]{
+    border-color: $green;
+    
+    &::before{
+      background-color: $green;
+    }
+  }  
+  .appThemeColor{
+	background-color:$green;	
+  }  
+  .appThemeColorHover:hover{
+	background-color:$green-hover;	
+  }
+}
+@for $i from 81 through 100 {
+  .arc[data-value="#{$i}"]{
+    border-color: $blue;
+    
+    &::before{
+      background-color: $blue;
+    }
+  }  
+  .appThemeColor{
+	background-color:$blue;	
+  }  
+  .appThemeColorHover:hover{
+	background-color:$blue-hover;	
+  }
+}
+
+@include keyframes(fill){
+  0%{@include rotate(0deg);
+    border-color: $red;
+  }
+  50%{@include rotate(180deg);
+  border-color: $blue;
+  }
+}
+
+@include keyframes(fillColor){
+  0%{
+    background-color: $red;
+  }
+  50%{@include rotate(180deg);
+  background-color: $blue;
+  }
+}
+

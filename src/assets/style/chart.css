@@ -1,0 +1,3829 @@
+.container {
+  display: block;
+  margin: 30px auto;
+}
+
+.pie-wrapper {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+.pie-wrapper .arc, .pie-wrapper:before {
+  content: '';
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  left: 0;
+  box-sizing: border-box;
+}
+.pie-wrapper:before {
+  border: 15px solid #E8E8E8;
+  border-bottom: none;
+  top: 0;
+  z-index: 1;
+  border-radius: 300px 300px 0 0;
+}
+.pie-wrapper .arc {
+  border: 15px solid #8BC34A;
+  border-top: none;
+  border-radius: 0 0 300px 300px;
+  top: 100%;
+  z-index: 2;
+}
+.pie-wrapper .arc::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+.pie-wrapper .score {
+  color: #394955;
+  font-size: 28px;
+  display: block;
+  width: 200px;
+  text-align: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.arc[data-value="1"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(1.8deg);
+  -ms-transform: rotate(1.8deg);
+  -webkit-transform: rotate(1.8deg);
+  transform: rotate(1.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="1"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="1"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="2"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  -webkit-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="2"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="2"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="3"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(5.4deg);
+  -ms-transform: rotate(5.4deg);
+  -webkit-transform: rotate(5.4deg);
+  transform: rotate(5.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="3"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="3"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="4"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  -webkit-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="4"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="4"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="5"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  -webkit-transform: rotate(9deg);
+  transform: rotate(9deg);
+  transition: All 5s ease;
+}
+.arc[data-value="5"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="5"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="6"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  -webkit-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="6"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="6"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="7"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(12.6deg);
+  -ms-transform: rotate(12.6deg);
+  -webkit-transform: rotate(12.6deg);
+  transform: rotate(12.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="7"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="7"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="8"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  -webkit-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="8"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="8"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="9"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(16.2deg);
+  -ms-transform: rotate(16.2deg);
+  -webkit-transform: rotate(16.2deg);
+  transform: rotate(16.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="9"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="9"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="10"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+  transition: All 5s ease;
+}
+.arc[data-value="10"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="10"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="11"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(19.8deg);
+  -ms-transform: rotate(19.8deg);
+  -webkit-transform: rotate(19.8deg);
+  transform: rotate(19.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="11"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="11"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="12"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  -webkit-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="12"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="12"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="13"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(23.4deg);
+  -ms-transform: rotate(23.4deg);
+  -webkit-transform: rotate(23.4deg);
+  transform: rotate(23.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="13"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="13"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="14"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  -webkit-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="14"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="14"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="15"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  -webkit-transform: rotate(27deg);
+  transform: rotate(27deg);
+  transition: All 5s ease;
+}
+.arc[data-value="15"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="15"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="16"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  -webkit-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="16"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="16"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="17"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(30.6deg);
+  -ms-transform: rotate(30.6deg);
+  -webkit-transform: rotate(30.6deg);
+  transform: rotate(30.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="17"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="17"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="18"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  -webkit-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="18"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="18"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="19"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(34.2deg);
+  -ms-transform: rotate(34.2deg);
+  -webkit-transform: rotate(34.2deg);
+  transform: rotate(34.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="19"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="19"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="20"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  -webkit-transform: rotate(36deg);
+  transform: rotate(36deg);
+  transition: All 5s ease;
+}
+.arc[data-value="20"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="20"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="21"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(37.8deg);
+  -ms-transform: rotate(37.8deg);
+  -webkit-transform: rotate(37.8deg);
+  transform: rotate(37.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="21"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="21"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="22"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  -webkit-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="22"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="22"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="23"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(41.4deg);
+  -ms-transform: rotate(41.4deg);
+  -webkit-transform: rotate(41.4deg);
+  transform: rotate(41.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="23"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="23"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="24"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  -webkit-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="24"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="24"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="25"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: All 5s ease;
+}
+.arc[data-value="25"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="25"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="26"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(46.8deg);
+  -ms-transform: rotate(46.8deg);
+  -webkit-transform: rotate(46.8deg);
+  transform: rotate(46.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="26"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="26"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="27"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(48.6deg);
+  -ms-transform: rotate(48.6deg);
+  -webkit-transform: rotate(48.6deg);
+  transform: rotate(48.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="27"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="27"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="28"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  -webkit-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="28"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="28"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="29"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(52.2deg);
+  -ms-transform: rotate(52.2deg);
+  -webkit-transform: rotate(52.2deg);
+  transform: rotate(52.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="29"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="29"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="30"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+  transition: All 5s ease;
+}
+.arc[data-value="30"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="30"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="31"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(55.8deg);
+  -ms-transform: rotate(55.8deg);
+  -webkit-transform: rotate(55.8deg);
+  transform: rotate(55.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="31"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="31"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="32"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  -webkit-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="32"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="32"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="33"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(59.4deg);
+  -ms-transform: rotate(59.4deg);
+  -webkit-transform: rotate(59.4deg);
+  transform: rotate(59.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="33"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="33"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="34"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  -webkit-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="34"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="34"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="35"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(63deg);
+  -ms-transform: rotate(63deg);
+  -webkit-transform: rotate(63deg);
+  transform: rotate(63deg);
+  transition: All 5s ease;
+}
+.arc[data-value="35"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="35"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="36"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  -webkit-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="36"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="36"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="37"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(66.6deg);
+  -ms-transform: rotate(66.6deg);
+  -webkit-transform: rotate(66.6deg);
+  transform: rotate(66.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="37"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="37"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="38"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  -webkit-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="38"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="38"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="39"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(70.2deg);
+  -ms-transform: rotate(70.2deg);
+  -webkit-transform: rotate(70.2deg);
+  transform: rotate(70.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="39"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="39"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="40"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+  transition: All 5s ease;
+}
+.arc[data-value="40"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="40"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="41"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(73.8deg);
+  -ms-transform: rotate(73.8deg);
+  -webkit-transform: rotate(73.8deg);
+  transform: rotate(73.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="41"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="41"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="42"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(75.6deg);
+  -ms-transform: rotate(75.6deg);
+  -webkit-transform: rotate(75.6deg);
+  transform: rotate(75.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="42"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="42"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="43"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(77.4deg);
+  -ms-transform: rotate(77.4deg);
+  -webkit-transform: rotate(77.4deg);
+  transform: rotate(77.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="43"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="43"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="44"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  -webkit-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="44"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="44"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="45"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  -webkit-transform: rotate(81deg);
+  transform: rotate(81deg);
+  transition: All 5s ease;
+}
+.arc[data-value="45"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="45"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="46"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  -webkit-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="46"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="46"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="47"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(84.6deg);
+  -ms-transform: rotate(84.6deg);
+  -webkit-transform: rotate(84.6deg);
+  transform: rotate(84.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="47"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="47"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="48"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  -webkit-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="48"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="48"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="49"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(88.2deg);
+  -ms-transform: rotate(88.2deg);
+  -webkit-transform: rotate(88.2deg);
+  transform: rotate(88.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="49"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="49"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="50"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: All 5s ease;
+}
+.arc[data-value="50"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="50"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="51"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(91.8deg);
+  -ms-transform: rotate(91.8deg);
+  -webkit-transform: rotate(91.8deg);
+  transform: rotate(91.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="51"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="51"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="52"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(93.6deg);
+  -ms-transform: rotate(93.6deg);
+  -webkit-transform: rotate(93.6deg);
+  transform: rotate(93.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="52"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="52"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="53"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(95.4deg);
+  -ms-transform: rotate(95.4deg);
+  -webkit-transform: rotate(95.4deg);
+  transform: rotate(95.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="53"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="53"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="54"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  -webkit-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="54"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="54"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="55"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(99deg);
+  -ms-transform: rotate(99deg);
+  -webkit-transform: rotate(99deg);
+  transform: rotate(99deg);
+  transition: All 5s ease;
+}
+.arc[data-value="55"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="55"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="56"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  -webkit-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="56"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="56"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="57"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(102.6deg);
+  -ms-transform: rotate(102.6deg);
+  -webkit-transform: rotate(102.6deg);
+  transform: rotate(102.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="57"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="57"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="58"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  -webkit-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="58"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="58"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="59"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(106.2deg);
+  -ms-transform: rotate(106.2deg);
+  -webkit-transform: rotate(106.2deg);
+  transform: rotate(106.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="59"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="59"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="60"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  -webkit-transform: rotate(108deg);
+  transform: rotate(108deg);
+  transition: All 5s ease;
+}
+.arc[data-value="60"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="60"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="61"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(109.8deg);
+  -ms-transform: rotate(109.8deg);
+  -webkit-transform: rotate(109.8deg);
+  transform: rotate(109.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="61"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="61"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="62"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(111.6deg);
+  -ms-transform: rotate(111.6deg);
+  -webkit-transform: rotate(111.6deg);
+  transform: rotate(111.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="62"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="62"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="63"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(113.4deg);
+  -ms-transform: rotate(113.4deg);
+  -webkit-transform: rotate(113.4deg);
+  transform: rotate(113.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="63"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="63"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="64"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  -webkit-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="64"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="64"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="65"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  -webkit-transform: rotate(117deg);
+  transform: rotate(117deg);
+  transition: All 5s ease;
+}
+.arc[data-value="65"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="65"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="66"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  -webkit-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="66"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="66"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="67"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(120.6deg);
+  -ms-transform: rotate(120.6deg);
+  -webkit-transform: rotate(120.6deg);
+  transform: rotate(120.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="67"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="67"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="68"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  -webkit-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="68"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="68"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="69"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(124.2deg);
+  -ms-transform: rotate(124.2deg);
+  -webkit-transform: rotate(124.2deg);
+  transform: rotate(124.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="69"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="69"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="70"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  -webkit-transform: rotate(126deg);
+  transform: rotate(126deg);
+  transition: All 5s ease;
+}
+.arc[data-value="70"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="70"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="71"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(127.8deg);
+  -ms-transform: rotate(127.8deg);
+  -webkit-transform: rotate(127.8deg);
+  transform: rotate(127.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="71"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="71"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="72"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  -webkit-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="72"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="72"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="73"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(131.4deg);
+  -ms-transform: rotate(131.4deg);
+  -webkit-transform: rotate(131.4deg);
+  transform: rotate(131.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="73"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="73"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="74"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(133.2deg);
+  -ms-transform: rotate(133.2deg);
+  -webkit-transform: rotate(133.2deg);
+  transform: rotate(133.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="74"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="74"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="75"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  transition: All 5s ease;
+}
+.arc[data-value="75"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="75"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="76"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  -webkit-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="76"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="76"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="77"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(138.6deg);
+  -ms-transform: rotate(138.6deg);
+  -webkit-transform: rotate(138.6deg);
+  transform: rotate(138.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="77"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="77"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="78"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  -webkit-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="78"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="78"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="79"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(142.2deg);
+  -ms-transform: rotate(142.2deg);
+  -webkit-transform: rotate(142.2deg);
+  transform: rotate(142.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="79"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="79"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="80"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+  transition: All 5s ease;
+}
+.arc[data-value="80"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="80"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="81"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(145.8deg);
+  -ms-transform: rotate(145.8deg);
+  -webkit-transform: rotate(145.8deg);
+  transform: rotate(145.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="81"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="81"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="82"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  -webkit-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="82"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="82"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="83"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(149.4deg);
+  -ms-transform: rotate(149.4deg);
+  -webkit-transform: rotate(149.4deg);
+  transform: rotate(149.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="83"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="83"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="84"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(151.2deg);
+  -ms-transform: rotate(151.2deg);
+  -webkit-transform: rotate(151.2deg);
+  transform: rotate(151.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="84"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="84"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="85"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  -webkit-transform: rotate(153deg);
+  transform: rotate(153deg);
+  transition: All 5s ease;
+}
+.arc[data-value="85"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="85"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="86"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  -webkit-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="86"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="86"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="87"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(156.6deg);
+  -ms-transform: rotate(156.6deg);
+  -webkit-transform: rotate(156.6deg);
+  transform: rotate(156.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="87"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="87"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="88"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  -webkit-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="88"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="88"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="89"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(160.2deg);
+  -ms-transform: rotate(160.2deg);
+  -webkit-transform: rotate(160.2deg);
+  transform: rotate(160.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="89"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="89"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="90"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  -webkit-transform: rotate(162deg);
+  transform: rotate(162deg);
+  transition: All 5s ease;
+}
+.arc[data-value="90"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="90"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="91"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(163.8deg);
+  -ms-transform: rotate(163.8deg);
+  -webkit-transform: rotate(163.8deg);
+  transform: rotate(163.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="91"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="91"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="92"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  -webkit-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="92"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="92"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="93"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(167.4deg);
+  -ms-transform: rotate(167.4deg);
+  -webkit-transform: rotate(167.4deg);
+  transform: rotate(167.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="93"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="93"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="94"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(169.2deg);
+  -ms-transform: rotate(169.2deg);
+  -webkit-transform: rotate(169.2deg);
+  transform: rotate(169.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="94"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="94"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="95"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  -webkit-transform: rotate(171deg);
+  transform: rotate(171deg);
+  transition: All 5s ease;
+}
+.arc[data-value="95"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="95"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="96"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  -webkit-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+  transition: All 5s ease;
+}
+.arc[data-value="96"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="96"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="97"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(174.6deg);
+  -ms-transform: rotate(174.6deg);
+  -webkit-transform: rotate(174.6deg);
+  transform: rotate(174.6deg);
+  transition: All 5s ease;
+}
+.arc[data-value="97"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="97"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="98"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  -webkit-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+  transition: All 5s ease;
+}
+.arc[data-value="98"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="98"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="99"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(178.2deg);
+  -ms-transform: rotate(178.2deg);
+  -webkit-transform: rotate(178.2deg);
+  transform: rotate(178.2deg);
+  transition: All 5s ease;
+}
+.arc[data-value="99"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="99"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="100"] {
+  -moz-animation: fill 2s;
+  -webkit-animation: fill 2s;
+  animation: fill 2s;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: All 5s ease;
+}
+.arc[data-value="100"]:after {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+.arc[data-value="100"]::before {
+  -moz-animation: fillColor 2s;
+  -webkit-animation: fillColor 2s;
+  animation: fillColor 2s;
+}
+
+.arc[data-value="1"] {
+  border-color: #F44336;
+}
+.arc[data-value="1"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="1"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="1"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="2"] {
+  border-color: #F44336;
+}
+.arc[data-value="2"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="2"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="2"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="3"] {
+  border-color: #F44336;
+}
+.arc[data-value="3"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="3"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="3"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="4"] {
+  border-color: #F44336;
+}
+.arc[data-value="4"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="4"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="4"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="5"] {
+  border-color: #F44336;
+}
+.arc[data-value="5"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="5"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="5"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="6"] {
+  border-color: #F44336;
+}
+.arc[data-value="6"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="6"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="6"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="7"] {
+  border-color: #F44336;
+}
+.arc[data-value="7"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="7"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="7"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="8"] {
+  border-color: #F44336;
+}
+.arc[data-value="8"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="8"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="8"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="9"] {
+  border-color: #F44336;
+}
+.arc[data-value="9"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="9"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="9"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="10"] {
+  border-color: #F44336;
+}
+.arc[data-value="10"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="10"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="10"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="11"] {
+  border-color: #F44336;
+}
+.arc[data-value="11"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="11"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="11"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="12"] {
+  border-color: #F44336;
+}
+.arc[data-value="12"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="12"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="12"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="13"] {
+  border-color: #F44336;
+}
+.arc[data-value="13"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="13"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="13"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="14"] {
+  border-color: #F44336;
+}
+.arc[data-value="14"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="14"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="14"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="15"] {
+  border-color: #F44336;
+}
+.arc[data-value="15"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="15"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="15"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="16"] {
+  border-color: #F44336;
+}
+.arc[data-value="16"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="16"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="16"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="17"] {
+  border-color: #F44336;
+}
+.arc[data-value="17"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="17"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="17"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="18"] {
+  border-color: #F44336;
+}
+.arc[data-value="18"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="18"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="18"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="19"] {
+  border-color: #F44336;
+}
+.arc[data-value="19"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="19"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="19"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="20"] {
+  border-color: #F44336;
+}
+.arc[data-value="20"]::before {
+  background-color: #F44336;
+}
+
+.appThemeColor[data-value="20"] {
+  background-color: #F44336;
+}
+
+.appThemeColorHover[data-value="20"]:hover {
+  background-color: #E53935;
+}
+
+.arc[data-value="21"] {
+  border-color: #FF9800;
+}
+.arc[data-value="21"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="21"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="21"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="22"] {
+  border-color: #FF9800;
+}
+.arc[data-value="22"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="22"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="22"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="23"] {
+  border-color: #FF9800;
+}
+.arc[data-value="23"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="23"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="23"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="24"] {
+  border-color: #FF9800;
+}
+.arc[data-value="24"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="24"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="24"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="25"] {
+  border-color: #FF9800;
+}
+.arc[data-value="25"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="25"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="25"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="26"] {
+  border-color: #FF9800;
+}
+.arc[data-value="26"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="26"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="26"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="27"] {
+  border-color: #FF9800;
+}
+.arc[data-value="27"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="27"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="27"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="28"] {
+  border-color: #FF9800;
+}
+.arc[data-value="28"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="28"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="28"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="29"] {
+  border-color: #FF9800;
+}
+.arc[data-value="29"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="29"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="29"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="30"] {
+  border-color: #FF9800;
+}
+.arc[data-value="30"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="30"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="30"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="31"] {
+  border-color: #FF9800;
+}
+.arc[data-value="31"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="31"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="31"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="32"] {
+  border-color: #FF9800;
+}
+.arc[data-value="32"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="32"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="32"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="33"] {
+  border-color: #FF9800;
+}
+.arc[data-value="33"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="33"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="33"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="34"] {
+  border-color: #FF9800;
+}
+.arc[data-value="34"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="34"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="34"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="35"] {
+  border-color: #FF9800;
+}
+.arc[data-value="35"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="35"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="35"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="36"] {
+  border-color: #FF9800;
+}
+.arc[data-value="36"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="36"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="36"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="37"] {
+  border-color: #FF9800;
+}
+.arc[data-value="37"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="37"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="37"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="38"] {
+  border-color: #FF9800;
+}
+.arc[data-value="38"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="38"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="38"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="39"] {
+  border-color: #FF9800;
+}
+.arc[data-value="39"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="39"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="39"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="40"] {
+  border-color: #FF9800;
+}
+.arc[data-value="40"]::before {
+  background-color: #FF9800;
+}
+
+.appThemeColor[data-value="40"] {
+  background-color: #FF9800;
+}
+
+.appThemeColorHover[data-value="40"]:hover {
+  background-color: #FB8C00;
+}
+
+.arc[data-value="41"] {
+  border-color: #FF5722;
+}
+.arc[data-value="41"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="41"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="41"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="42"] {
+  border-color: #FF5722;
+}
+.arc[data-value="42"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="42"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="42"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="43"] {
+  border-color: #FF5722;
+}
+.arc[data-value="43"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="43"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="43"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="44"] {
+  border-color: #FF5722;
+}
+.arc[data-value="44"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="44"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="44"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="45"] {
+  border-color: #FF5722;
+}
+.arc[data-value="45"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="45"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="45"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="46"] {
+  border-color: #FF5722;
+}
+.arc[data-value="46"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="46"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="46"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="47"] {
+  border-color: #FF5722;
+}
+.arc[data-value="47"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="47"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="47"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="48"] {
+  border-color: #FF5722;
+}
+.arc[data-value="48"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="48"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="48"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="49"] {
+  border-color: #FF5722;
+}
+.arc[data-value="49"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="49"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="49"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="50"] {
+  border-color: #FF5722;
+}
+.arc[data-value="50"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="50"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="50"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="51"] {
+  border-color: #FF5722;
+}
+.arc[data-value="51"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="51"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="51"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="52"] {
+  border-color: #FF5722;
+}
+.arc[data-value="52"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="52"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="52"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="53"] {
+  border-color: #FF5722;
+}
+.arc[data-value="53"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="53"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="53"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="54"] {
+  border-color: #FF5722;
+}
+.arc[data-value="54"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="54"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="54"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="55"] {
+  border-color: #FF5722;
+}
+.arc[data-value="55"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="55"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="55"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="56"] {
+  border-color: #FF5722;
+}
+.arc[data-value="56"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="56"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="56"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="57"] {
+  border-color: #FF5722;
+}
+.arc[data-value="57"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="57"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="57"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="58"] {
+  border-color: #FF5722;
+}
+.arc[data-value="58"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="58"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="58"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="59"] {
+  border-color: #FF5722;
+}
+.arc[data-value="59"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="59"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="59"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="60"] {
+  border-color: #FF5722;
+}
+.arc[data-value="60"]::before {
+  background-color: #FF5722;
+}
+
+.appThemeColor[data-value="60"] {
+  background-color: #FF5722;
+}
+
+.appThemeColorHover[data-value="60"]:hover {
+  background-color: #F4511E;
+}
+
+.arc[data-value="61"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="61"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="61"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="61"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="62"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="62"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="62"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="62"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="63"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="63"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="63"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="63"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="64"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="64"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="64"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="64"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="65"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="65"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="65"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="65"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="66"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="66"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="66"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="66"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="67"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="67"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="67"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="67"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="68"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="68"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="68"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="68"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="69"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="69"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="69"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="69"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="70"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="70"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="70"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="70"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="71"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="71"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="71"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="71"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="72"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="72"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="72"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="72"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="73"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="73"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="73"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="73"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="74"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="74"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="74"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="74"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="75"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="75"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="75"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="75"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="76"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="76"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="76"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="76"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="77"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="77"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="77"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="77"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="78"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="78"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="78"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="78"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="79"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="79"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="79"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="79"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="80"] {
+  border-color: #8BC34A;
+}
+.arc[data-value="80"]::before {
+  background-color: #8BC34A;
+}
+
+.appThemeColor[data-value="80"] {
+  background-color: #8BC34A;
+}
+
+.appThemeColorHover[data-value="80"]:hover {
+  background-color: #7CB342;
+}
+
+.arc[data-value="81"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="81"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="81"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="81"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="82"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="82"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="82"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="82"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="83"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="83"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="83"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="83"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="84"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="84"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="84"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="84"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="85"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="85"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="85"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="85"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="86"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="86"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="86"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="86"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="87"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="87"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="87"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="87"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="88"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="88"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="88"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="88"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="89"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="89"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="89"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="89"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="90"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="90"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="90"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="90"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="91"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="91"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="91"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="91"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="92"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="92"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="92"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="92"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="93"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="93"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="93"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="93"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="94"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="94"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="94"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="94"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="95"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="95"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="95"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="95"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="96"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="96"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="96"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="96"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="97"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="97"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="97"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="97"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="98"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="98"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="98"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="98"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="99"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="99"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="99"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="99"]:hover {
+  background-color: #039BE5;
+}
+
+.arc[data-value="100"] {
+  border-color: #03A9F4;
+}
+.arc[data-value="100"]::before {
+  background-color: #03A9F4;
+}
+
+.appThemeColor[data-value="100"] {
+  background-color: #03A9F4;
+}
+
+.appThemeColorHover[data-value="100"]:hover {
+  background-color: #039BE5;
+}
+
+@-moz-keyframes fill {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border-color: #F44336;
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-color: #03A9F4;
+  }
+}
+@-webkit-keyframes fill {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border-color: #F44336;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-color: #03A9F4;
+  }
+}
+@keyframes fill {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border-color: #F44336;
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-color: #03A9F4;
+  }
+}
+@-moz-keyframes fillColor {
+  0% {
+    background-color: #F44336;
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: #03A9F4;
+  }
+}
+@-webkit-keyframes fillColor {
+  0% {
+    background-color: #F44336;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: #03A9F4;
+  }
+}
+@keyframes fillColor {
+  0% {
+    background-color: #F44336;
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: #03A9F4;
+  }
+}

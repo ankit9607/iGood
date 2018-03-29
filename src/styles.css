@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+@import url("https://fonts.googleapis.com/css?family=Questrial");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body{
+    margin:0;
+    padding:0;
+    color:#333;
+    font-family: 'Questrial', serif;
+    }	
+    a,a:hover,a:active,a:focus,button,button:hover,button:active,button:focus,input,input:hover,input:active,input:focus{
+        outline:none;
+}
