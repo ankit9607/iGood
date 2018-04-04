@@ -5,11 +5,13 @@ import { NgForage } from '@ngforage/ngforage-ng5';
 import 'rxjs/add/observable/fromPromise';
 import { Activity } from '../../model/Activity';
 import { Strike } from '../../model/Strike';
+import { SocketService } from '../socket/socket.service';
+import { DbService } from '../dbservice/db.service';
 
 @Injectable()
 export class LocalForageService {
 
-  constructor(private readonly ngf: NgForage) { }
+  constructor(private readonly ngf: NgForage, private socketService : SocketService, private dbService : DbService) { }
 
 
 /* Getter */
@@ -36,38 +38,36 @@ export class LocalForageService {
   }
 
   async getActivityByName(name){
-    return await this.ngf.getItem<Activity>(name);
+    return await this.dbService.getActivityByName(name);
   }
-
-  async addNewActivity(newActivity) {
-    let activities = await this.ngf.getItem<Activity[]>('Activities');
-
-    if(activities!=null){
-      activities = await this.ngf.getItem<Activity[]>('Activities');
-      activities.push(newActivity.name);
-    }
-    else {
-      await this.ngf.setItem('Activities', [newActivity.name]);
-    }
+  /*--------------------SETTER----------------------------------------*/
+  async addNewActivity(newActivity : Activity) {
+    await this.dbService.addNewActivity(newActivity);
     await this.ngf.setItem('selectedActivityName', newActivity.name);
-    await this.ngf.setItem(newActivity.name,newActivity);
+    await this.socketService.pushEvent('Activity',newActivity.name,'Add',newActivity);
+
   }
 
 
   async addStrike(activity: Activity, strikeDate : number){
     let nowDate = new Date().getTime();
+    let strike;
     if(strikeDate > activity.latestStrikeDate){
-      let strike = new Strike(nowDate, strikeDate,(strikeDate-activity.latestStrikeDate));
+      strike = new Strike(nowDate, strikeDate,(strikeDate-activity.latestStrikeDate));
       activity.strikes.push(strike);
       activity.latestStrikeDate = strike.strikeDate;
       if(activity.bestStrikeDuration < strike.strikeDuration) activity.bestStrikeDuration = strike.strikeDuration;
     }else{
-      let strike = new Strike(nowDate, strikeDate,0);
+      strike = new Strike(nowDate, strikeDate,0);
       activity.strikes.push(strike);
       // need neo4j for max strike logic.
     }
     // call neo4j for avg strike logic.
-    await this.ngf.setItem(activity.name,activity);
+
+    // Save Locally
+    await this.dbService.addStrike(strike,activity.name);
+    // Save Log for server
+    await this.socketService.pushEvent('Strike',activity.name,'Add',strike);
   }
 
 

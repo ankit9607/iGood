@@ -10,6 +10,8 @@ import { AppRoutingModule } from './module/router/app-routing/app-routing.module
 import { StrikeService } from './service/strike/strike.service';
 import { LocalForageService } from './service/local-forage/local-forage.service';
 import { NewActivityComponent } from './component/new-activity/new-activity.component';
+import { SocketService } from './service/socket/socket.service';
+import { DbService } from './service/dbservice/db.service';
 
 
 @NgModule({
@@ -25,7 +27,7 @@ import { NewActivityComponent } from './component/new-activity/new-activity.comp
     NgForageModule,
     FormsModule
   ],
-  providers: [StrikeService, LocalForageService],
+  providers: [StrikeService, LocalForageService, SocketService, DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

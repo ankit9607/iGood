@@ -2,7 +2,7 @@ import { Strike } from "./Strike";
 
 export class Activity {
     name : string;
-    description : string;
+    description : string = "";
     bestStrikeDuration : number = 0;
     avgStrikeDuration : number = 0;
     latestStrikeDate : number = 0;
