@@ -57,7 +57,6 @@ export class SocketService {
     };
 
     await this.saveLocal(data);
-    console.log('indexedDB is updates, As server is not Connected.');
   }
 
   async saveLocal(data : any){

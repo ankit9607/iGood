@@ -50,6 +50,11 @@ export class LocalForageService {
 
 
   async addStrike(activity: Activity, strikeDate : number){
+    //Need to Store Strike Duration Now.
+    // Or call Server to update Strike Duration when connected.
+
+    //Need to update avg,latest,max strikes in Activity.
+    //Or call Now as same need to update to frontend Now.
     let nowDate = new Date().getTime();
     let strike;
     if(strikeDate > activity.latestStrikeDate){
@@ -57,15 +62,17 @@ export class LocalForageService {
       activity.strikes.push(strike);
       activity.latestStrikeDate = strike.strikeDate;
       if(activity.bestStrikeDuration < strike.strikeDuration) activity.bestStrikeDuration = strike.strikeDuration;
+      console.log('LatestStrike Add.');
     }else{
       strike = new Strike(nowDate, strikeDate,0);
       activity.strikes.push(strike);
+      console.log('this Strike will be store in previous record, LatestStrike will remain same.');
       // need neo4j for max strike logic.
     }
     // call neo4j for avg strike logic.
 
-    // Save Locally
-    await this.dbService.addStrike(strike,activity.name);
+    // Save Locally -- WE arready add Strike into Activity.
+    await this.dbService.updateActivity(activity);
     // Save Log for server
     await this.socketService.pushEvent('Strike',activity.name,'Add',strike);
   }
